@@ -18,21 +18,21 @@ pipeline{
             steps{
                 git branch: 'prep', 
                     credentialsId: 'github', 
-                    url: 'htt ps://github.com/savanil/complete-prodcution-e2e-pipeline.git'
+                    url: 'https://github.com/savanil/complete-prodcution-e2e-pipeline.git'
             }
         }
 
-        // stage("Build Application"){
-        //     steps{
+        stage("Build Application"){
+            steps{
+                sh "mvn clean package"
+            }
+        }
 
-        //     }
-        // }
-
-        // stage("Test Application"){
-        //     steps{
-
-        //     } 
-        // }
+        stage("Test Application"){
+            steps{
+                sh "mvn test"
+            } 
+        }
     }
 
 }
