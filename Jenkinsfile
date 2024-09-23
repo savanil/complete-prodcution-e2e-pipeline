@@ -18,7 +18,7 @@ pipeline{
             steps{
                 git branch: 'prep', 
                     credentialsId: 'github', 
-                    url: 'https://github.com/savanil/complete-prodcution-e2e-pipeline.git'
+                    url: 'htt ps://github.com/savanil/complete-prodcution-e2e-pipeline.git'
             }
         }
 
